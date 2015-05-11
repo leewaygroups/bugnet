@@ -1,0 +1,11 @@
+COMMENT:
+
+1) All other projects except BugNet-WAP looks ok improvement on them not a priority for this cyle
+
+2) Replace BugNet-WAP with an MVC Project.
+
+3) Dust ASP.NET noises off BugNet-WAP, begin as follows:
+	i) Default page
+	ii) Memberships
+
+Increamentally adapt others in subsequent sprint cycle.

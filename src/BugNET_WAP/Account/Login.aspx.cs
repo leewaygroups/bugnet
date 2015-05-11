@@ -6,21 +6,24 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using log4net;
 
 namespace BugNET.Account
 {
     public partial class Login : Page
     {
+		
         protected void Page_Load(object sender, EventArgs e)
         {
             Register_Localize.Text = GetLocalizedText(ResolveUrl("~/Account/Register.aspx"));
             OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
             this.Form.DefaultButton = this.LoginView.FindControl("LoginButton").UniqueID;
 
-            if (Convert.ToInt32(HostSettingManager.Get(HostSettingNames.UserRegistration)) == (int)UserRegistration.None)
-            {
-                Register_Localize.Visible = false;
-            }
+
+			if (Convert.ToInt32(HostSettingManager.Get(HostSettingNames.UserRegistration)) == (int)UserRegistration.None)
+			{
+				Register_Localize.Visible = false;
+			}
 
         }
 

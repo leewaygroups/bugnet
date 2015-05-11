@@ -996,7 +996,7 @@ namespace BugNET.Providers.DataProviders
         {
             using (var sqlCmd = new SqlCommand())
             {
-                AddParamToSqlCmd(sqlCmd, "@ActiveOnly", SqlDbType.Bit, 0, ParameterDirection.Input, activeOnly);
+				//AddParamToSqlCmd(sqlCmd, "@ActiveOnly", SqlDbType.Bit, 0, ParameterDirection.Input, activeOnly);
                 SetCommandType(sqlCmd, CommandType.StoredProcedure, SP_PROJECT_GETALLPROJECTS);
 
                 var projectList = new List<Project>();
